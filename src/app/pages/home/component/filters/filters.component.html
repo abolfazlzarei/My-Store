@@ -1,0 +1,12 @@
+<mat-expansion-panel  *ngIf="categories" class="!bg-emerald-800 ">
+
+<mat-expansion-panel-header>
+    <mat-panel-title class="!text-blue-200">CATEGORIES</mat-panel-title>
+</mat-expansion-panel-header>
+
+    <mat-selection-list [multiple]="false" >
+  <mat-list-option (click)="onshowCategory(category)" *ngFor="let category of categories" [value]="category">
+<button class="!text-gray-50">{{category}}</button>
+  </mat-list-option>
+    </mat-selection-list>
+</mat-expansion-panel>
